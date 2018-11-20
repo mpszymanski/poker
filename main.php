@@ -13,7 +13,7 @@ $analyzer = new PokerAnalyzer();
 
 for ($i = 0; $i < 1000; $i++) {
     $deal = $builder->buildRandomDeal();
-    $analyzer->addDeal($deal);
+    $analyzer->AnalyzeDeal($deal);
 }
 
 $view = new AnalyzeView($analyzer);

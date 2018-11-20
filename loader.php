@@ -6,7 +6,7 @@
  * Time: 16:33
  */
 
-const ROOT_DIR = 'src';
+const ROOT_DIR = __DIR__ . '/src';
 
 $classesDir = [
     ROOT_DIR,

@@ -19,7 +19,7 @@ class PokerAnalyzer
         $this->renderAvailableHands();
     }
 
-    public function addDeal(Deal $deal)
+    public function AnalyzeDeal(Deal $deal)
     {
         $this->deals[] = $deal;
 
@@ -30,6 +30,8 @@ class PokerAnalyzer
         } else {
             $this->handsCounts[$handName] = 1;
         }
+
+        return $handName;
     }
 
     public function getHandsCounts()

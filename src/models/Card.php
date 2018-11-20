@@ -29,7 +29,7 @@ class Card
      * @param $face
      * @param $suit
      */
-    public function __construct($name, $face, $suit)
+    public function __construct($face, $suit, $name = '')
     {
         $this->name = $name;
         $this->suit = $suit;

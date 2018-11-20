@@ -51,7 +51,7 @@ class DealBuilder
         foreach ($faces as $faceName => $face) {
             foreach ($suits as $suitName => $suit) {
                 $name = str_replace('_', '', "$faceName $suitName");
-                $this->availableCards[] = new Card($name, $face, $suit);
+                $this->availableCards[] = new Card($face, $suit, $name);
             }
         }
     }
