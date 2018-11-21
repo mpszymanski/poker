@@ -9,4 +9,5 @@
 abstract class PokerHands
 {
     static $RoyalFlushHand = RoyalFlushHand::class;
+    static $StraightFlushHand = StraightFlushHand::class;
 }

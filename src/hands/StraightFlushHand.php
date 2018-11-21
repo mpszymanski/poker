@@ -6,7 +6,7 @@
  * Time: 19:06
  */
 
-class RoyalFlushHand extends Hand
+class StraightFlushHand extends Hand
 {
 
     function check(Deal $deal)
@@ -14,12 +14,12 @@ class RoyalFlushHand extends Hand
         $suits = $deal->getSuits();
         $faces = $deal->getFaces();
 
-        // Same Suit
+        // The same Suit
         if (!$this->hasOneSuit($suits))
             return false;
 
-        // Cards from Ace to 10
-        if ($faces !== [CardFaces::$Ace, CardFaces::$King, CardFaces::$Queen, CardFaces::$Jack, CardFaces::$_10])
+        // Is well ordered like: 10, 9, 8, 7, 6
+        if (!$this->isWellOrdered($faces))
             return false;
 
         return true;
@@ -27,6 +27,6 @@ class RoyalFlushHand extends Hand
 
     function getName()
     {
-        return 'Royal Flush';
+        return 'Straight Flush';
     }
 }

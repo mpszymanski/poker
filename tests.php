@@ -11,3 +11,4 @@ include 'tests/loader.php';
 
 
 (new RoyalFlushTest)->run();
+(new StraightFlushTest)->run();
