@@ -6,7 +6,7 @@
  * Time: 19:02
  */
 
-abstract class Hand
+abstract class AbstractHand
 {
     abstract function check(Deal $deal);
 
@@ -25,5 +25,10 @@ abstract class Hand
         }
 
         return true;
+    }
+
+    public function sameValuesCount($faces)
+    {
+        return array_values(array_count_values($faces));
     }
 }

@@ -6,7 +6,7 @@
  * Time: 19:06
  */
 
-class StraightFlushHand extends AbstractHand
+class FlushHand extends AbstractHand
 {
 
     function check(Deal $deal)
@@ -14,12 +14,12 @@ class StraightFlushHand extends AbstractHand
         $suits = $deal->getSuits();
         $faces = $deal->getFaces();
 
-        // The same Suit
+        // Same Suit
         if (!$this->hasOneSuit($suits))
             return false;
 
-        // Is well ordered like: 10, 9, 8, 7, 6
-        if (!$this->isWellOrdered($faces))
+        // Well ordered
+        if ($this->isWellOrdered($faces))
             return false;
 
         return true;
@@ -27,6 +27,6 @@ class StraightFlushHand extends AbstractHand
 
     function getName()
     {
-        return 'Straight Flush';
+        return 'Flush';
     }
 }

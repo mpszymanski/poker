@@ -10,3 +10,7 @@
 foreach (glob("tests/src/*.php") as $filename) {
     include $filename;
 }
+
+foreach (glob("tests/*.php") as $filename) {
+    include $filename;
+}

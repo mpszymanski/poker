@@ -7,8 +7,9 @@
  */
 
 include 'loader.php';
-include 'tests/loader.php';
+include 'tests_loader.php';
 
-
-(new RoyalFlushTest)->run();
-(new StraightFlushTest)->run();
+foreach (glob("tests/*.php") as $filename) {
+    preg_match("/.*\/(.*)\.php/", $filename, $class);
+    (new $class[1])->run();
+}

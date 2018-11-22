@@ -6,7 +6,7 @@
  * Time: 19:06
  */
 
-class RoyalFlushHand extends Hand
+class RoyalFlushHand extends AbstractHand
 {
 
     function check(Deal $deal)

@@ -23,8 +23,11 @@ class AnalyzeView
     public function render()
     {
         $analyzer = $this->analyzer;
+        $count = $analyzer->getDealsCount();
         foreach ($analyzer->getHandsCounts() as $handName => $handsCount) {
-            echo "$handName: $handsCount\n";
+            $partOfTheRandom = $handsCount / $count * 100;
+            echo "==$handName==\n";
+            echo "Randomized: $handsCount ($partOfTheRandom%)\t \n";
         }
     }
 }

@@ -34,6 +34,11 @@ class PokerAnalyzer
         return $handName;
     }
 
+    public function getDealsCount()
+    {
+        return count($this->deals);
+    }
+
     public function getHandsCounts()
     {
         return $this->handsCounts;
